@@ -1,34 +1,154 @@
-body{
-  background: rgba(0,54,214,1);
-  background: -moz-linear-gradient(top, rgba(0,54,214,1) 0%, rgba(28,116,179,1) 100%);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,54,214,1)), color-stop(100%, rgba(28,116,179,1)));
-  background: -webkit-linear-gradient(top, rgba(0,54,214,1) 0%, rgba(28,116,179,1) 100%);
-  background: -o-linear-gradient(top, rgba(0,54,214,1) 0%, rgba(28,116,179,1) 100%);
-  background: -ms-linear-gradient(top, rgba(0,54,214,1) 0%, rgba(28,116,179,1) 100%);
-  background: linear-gradient(to bottom, rgba(0,54,214,1) 0%, rgba(28,116,179,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0036d6', endColorstr='#1c74b3', GradientType=0 );
-  color: #fff;
+@import "_fonts";
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
 }
-.in{
+
+.clearfix {
+  display: inline-block;
+}
+
+/* start commented backslash hack \*/
+* html .clearfix {
+  height: 1%;
+}
+
+.clearfix {
+  display: block;
+}
+
+/* close commented backslash hack */
+
+body {
+  background: rgba(0, 54, 214, 1);
+  background: -moz-linear-gradient(top, rgba(0, 54, 214, 1) 0%, rgba(28, 116, 179, 1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0, 54, 214, 1)), color-stop(100%, rgba(28, 116, 179, 1)));
+  background: -webkit-linear-gradient(top, rgba(0, 54, 214, 1) 0%, rgba(28, 116, 179, 1) 100%);
+  background: -o-linear-gradient(top, rgba(0, 54, 214, 1) 0%, rgba(28, 116, 179, 1) 100%);
+  background: -ms-linear-gradient(top, rgba(0, 54, 214, 1) 0%, rgba(28, 116, 179, 1) 100%);
+  background: linear-gradient(to bottom, rgba(0, 54, 214, 1) 0%, rgba(28, 116, 179, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0036d6', endColorstr='#1c74b3', GradientType=0);
+  color: #fff;
+  @extend .font-rubik;
+  font-size: 16px;
+  background: url('../images/temp-01.jpg') 46px -2px no-repeat;
+  min-height: 1080px;
+}
+
+.in {
   max-width: 1666px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-.logo{
+.logo {
   position: relative;
   padding-left: 10px;
-  margin-left: 39px;
-  &:before{
+  margin-left: 40px;
+  padding-top: 10px;
+  margin-top: 54px;
+  font-size: 21px;
+  float: left;
+  @extend .font-rubik-bold;
+  &:before {
     display: block;
     position: absolute;
     left: -39px;
-    top: 0;
+    top: -4px;
     content: '';
     background: url('../images/logo.svg') 0 0 no-repeat;
     background-size: contain;
     width: 39px;
     height: 48px;
   }
+}
 
+.header {
+  .right {
+    float: right;
+    margin-top: 40px;
+    margin-bottom: 107px;
+    .block {
+      float: left;
+      margin-right: 70px;
+      span {
+        display: block;
+      }
+      &.b1 {
+        position: relative;
+        &:before {
+          content: 'A.';
+          display: block;
+          position: absolute;
+          left: -18px;
+          color: #ff9d00;
+          font-size: 13px;
+        }
+      }
+      &.b2 {
+        margin-right: 41px;
+        line-height: 1.4;
+        span {
+          &:before {
+            display: block;
+            position: absolute;
+            font-size: 13px;
+            color: #ff9d00;
+          }
+          position: relative;
+          &.l1:before {
+            content: 'T.';
+            left: -18px;
+          }
+          &.l2:before {
+            content: 'T. M.';
+            left: -37px;
+          }
+          &.l3:before {
+            content: 'E.';
+            left: -20px;
+          }
+        }
+      }
+      &.b3 {
+        @extend .font-rubik-light;
+        margin-right: 43px;
+        span {
+          @extend .font-rubik-medium;
+        }
+      }
+    }
+  }
+}
+
+.main {
+  .left {
+    float: left;
+    width: 50%;
+    h1 {
+      font-size: 72px;
+      @extend .font-rubik-bold;
+      line-height: 1;
+      padding-left: 192px;
+      span {
+        display: block;
+      }
+    }
+    .hint{
+      font-size: 20px;
+      @extend .font-rubik-light;
+      color: #ff9d00;
+      padding-left: 192px;
+      margin-top: 63px;
+    }
+  }
+  .right {
+    float: right;
+    width: 50%;
+  }
 }
