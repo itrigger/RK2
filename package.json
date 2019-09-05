@@ -38,5 +38,9 @@
   },
   "eslintConfig": {
     "extends": "google"
+  },
+  "dependencies": {
+    "animejs": "^3.1.0",
+    "jquery": "^1.12.4"
   }
 }

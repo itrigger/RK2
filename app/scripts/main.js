@@ -72,5 +72,32 @@
     });
   }
 
-  // Your custom JavaScript goes here
+
+  const svgPath = document.querySelectorAll('.st89, .st90');
+  const svgPath2 = document.querySelectorAll('.st91, .st92');
+
+
+  anime({
+    targets: svgPath,
+    loop: false,
+    direction: 'alternate',
+    strokeDashoffset: [anime.setDashoffset, 0],
+    easing: 'easeInOutSine',
+    duration: 2000,
+    delay: 0,
+    begin: function (anim) {
+      $('body').addClass('ready');
+    }
+  });
+  anime({
+    targets: svgPath2,
+    loop: false,
+    direction: 'alternate',
+    strokeDashoffset: [anime.setDashoffset, 0],
+    easing: 'easeInOutSine',
+    duration: 2000,
+    delay: 1000
+  });
+
+
 })();
