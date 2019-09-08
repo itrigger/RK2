@@ -34,7 +34,8 @@
   },
   "private": true,
   "scripts": {
-    "test": "gulp serve"
+    "test": "gulp",
+    "test-html": "gulp html"
   },
   "eslintConfig": {
     "extends": "google"
